@@ -1,0 +1,6 @@
+body { background-image: url('../imagenes/Avatar.png'); }
+p { font-size: 100%; }
+h1 { font-size: 40px; }
+div { margin: 20px; width: 1200px; padding: 5px; border: 6px solid teal; }
+table { border: 1px solid teal; }
+

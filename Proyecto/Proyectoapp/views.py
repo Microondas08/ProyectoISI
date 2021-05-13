@@ -5,6 +5,6 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 def index(request):
 
-   return render(request, "home.html"),
+   return render(request, "home.html")
     
     
