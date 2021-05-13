@@ -1,0 +1,7 @@
+body { background-image: url('blancoroto.jpg'); }
+p { font-size: 100%; }
+h1 { font-size: 16px; }
+div { margin: 20px; width: 1200px; padding: 5px; border: 1  px solid grey; }
+table { border: 1px double teal; }
+</style>
+</head>
