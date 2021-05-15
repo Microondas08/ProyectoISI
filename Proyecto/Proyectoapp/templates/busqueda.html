@@ -1,25 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" href="practica.css">
-    <title>Practica JC</title>
-</head>
-	<body>
-<div>
-<pre><a href="{% url 'index' %}"></a>Inicio</a> </pre>
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+<div align="center">
+    <h1>GOOGLE</h1>
+    <form action="" method="get">
+        <input type="text" id="search">
+        <input type="submit" name="send" value="Search">
+    </form>
+
+    <h2>El resultado de la busqueda es:   {{search}} </h2>
+
 </div>
-	    <h1>Inicio</h1>
 
-	    <div>
-				Busqueda
-	    </div>
 
-	    <p>Text in a p element.</p>
-
-	    <table>
-	        <tr><td>Text in a table.</td></tr>
-	    </table>
-	</body>
-</html>
+{% endblock %}
