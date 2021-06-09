@@ -19,3 +19,5 @@ for i in range(len(response.json()['cast'])):
 
 print(actor)
 
+print(response.json().keys())
+
