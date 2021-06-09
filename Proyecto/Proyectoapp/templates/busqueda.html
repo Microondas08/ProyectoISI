@@ -7,15 +7,25 @@
 
 
 <div align="center">
-    <h1>GOOGLE</h1>
+    <h1>ACTOR</h1>
     <form action="" method="get">
-        <input type="text" id="search">
-        <input type="submit" name="send" value="Search">
+        <input type="text" name="busqueda" id="search">
+        <input type="submit">
     </form>
 
-    <h2>El resultado de la busqueda es:   {{search}} </h2>
+    <h2>El resultado de la busqueda es:  </h2>
+
+    <img src="{{foto}}" alt="">
+
+    <h3>
+        {{info1title}} <br> <a href="{{info1link}}">{{info1link}} </a><br>
+        {{info2title}} <br>  <a href="{{info2link}}">{{info2link}} </a> <br>
+        {{info3title}} <br>  <a href="{{info3link}}">{{info3link}} </a> <br>
+    </h3>
 
 </div>
+
+
 
 
 {% endblock %}

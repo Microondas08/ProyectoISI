@@ -22,6 +22,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.index, name='home'),
     path('busqueda', views.busqueda, name='busqueda'),
+    path('pelicula', views.pelicula, name='pelicula'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
