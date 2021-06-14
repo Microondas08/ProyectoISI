@@ -4,7 +4,7 @@ Sistema de información basado en la búsqueda de películas, estrenos y actores
 
 ## Desallorrador
 
-    Juan Carlos López Morales: https://github.com/Microondas08
+    Juan Carlos López Morales: [Microondas08](https://github.com/Microondas08)
 
 ## Dependencias
 
