@@ -2,6 +2,8 @@ from django.shortcuts import render,  redirect
 from django.http import HttpResponse, HttpResponseRedirect
 import requests
 import pandas as pd
+from bs4 import BeautifulSoup
+
 
 # Create your views here.
 
@@ -31,7 +33,10 @@ def pelicula(request):
 
          actor.insert(i,response.json()['cast'][i]['actor']) 
 
-      
+      df = pd.DataFrame(actor)
+
+      n_actor= df.size
+
       rating = response.json()['rating']
       length = response.json()['length']
 
@@ -51,7 +56,30 @@ def pelicula(request):
 
       foto=response.json()["image_results"][1]["image"]["src"]
 
-      return render(request, "pelicula.html", {'actor': actor, 'rating':rating, 'length':length, 'foto':foto})
+      url='https://www.cinesa.es/peliculas/cartelera'
+
+      page = requests.get(url)
+
+      soup= BeautifulSoup(page.content, 'html.parser')
+
+      pelicula = soup.find_all('a', class_='vf')
+
+      peliculas = list()
+
+
+      count = 0
+      
+      for i in pelicula: 
+         if count < 20:
+            if count % 2 == 0:
+                  peliculas.append(i.text)
+         else:
+            break
+
+         count+=1
+
+
+      return render(request, "pelicula.html", {'actor': actor, 'rating':rating, 'length':length, 'foto':foto,'n_actor':n_actor,'df':df, 'peliculas':peliculas})
 
 
 
